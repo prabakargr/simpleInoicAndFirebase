@@ -1,14 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-menu [content]="content">
+  <ion-content>
+      <ion-list>
+          <button class="addBorderBtm" menuClose ion-item (click)="openPage('dashboard')">
+            Dashboard
+          </button>
+          <button class="addBorderBtm" menuClose ion-item (click)="openPage('list')">
+              Profile
+            </button>
+      </ion-list>
+  </ion-content>
+</ion-menu>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
